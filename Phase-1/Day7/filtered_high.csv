@@ -1,0 +1,13 @@
+Adm_No,Name,Gender,Class,Subject,Marks,Percentage
+1,Aarav,M,I,Maths,78,78.33
+1,Aarav,M,I,Science,82,78.33
+1,Aarav,M,I,English,75,78.33
+2,Diya,F,II,Maths,91,88.0
+2,Diya,F,II,Science,88,88.0
+2,Diya,F,II,English,85,88.0
+6,Meera,F,I,Maths,95,92.67
+6,Meera,F,I,Science,93,92.67
+6,Meera,F,I,English,90,92.67
+9,Arjun,M,II,Maths,80,76.0
+9,Arjun,M,II,Science,76,76.0
+9,Arjun,M,II,English,72,76.0
