@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | AgriSense</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <a class="logo" href="index.html">
+                <i class="fa-solid fa-seedling"></i>
+                AgriSense
+            </a>
+
+            <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
+            <label class="nav-toggle" for="navToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a class="current" href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="nav-cta" href="recommend.html">Get Recommendation</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="about">
+            <h2 class="section-title">About AgriSense</h2>
+            <p class="section-subtitle">
+                A closer look at what AgriSense is, how it's built, and where it's headed.
+            </p>
+            <div class="about-text">
+                <p>
+                    AgriSense is a full-stack crop advisory platform built as part of the
+                    Innolift Ventures Full Stack AI Developer Program. It pairs a machine
+                    learning model trained on soil and climate data with a simple web
+                    interface so farmers can get a crop recommendation in seconds.
+                </p>
+                <p>
+                    The idea is simple: instead of relying on guesswork, a farmer enters
+                    soil nutrients (N, P, K), temperature, humidity, pH, and rainfall, and
+                    gets back the crop best suited to those conditions.
+                </p>
+            </div>
+        </section>
+
+        <section id="stack">
+            <h2 class="section-title">Built With</h2>
+            <div class="tag-list">
+                <span>Python</span>
+                <span>Scikit-learn</span>
+                <span>Pandas</span>
+                <span>Flask</span>
+                <span>MySQL</span>
+                <span>HTML5 &amp; CSS3</span>
+            </div>
+        </section>
+
+        <section id="status">
+            <h2 class="section-title">Project Status</h2>
+            <p class="section-subtitle">
+                AgriSense is being built in phases through the internship. Here's where it stands.
+            </p>
+            <div class="status-list">
+
+                <div class="status-item done">
+                    <i class="fa-solid fa-check"></i>
+                    <div>
+                        <h4>Crop Recommendation Model</h4>
+                        <p>A Decision Tree classifier trained on the Crop Recommendation dataset, tuned with GridSearchCV.</p>
+                    </div>
+                </div>
+
+                <div class="status-item done">
+                    <i class="fa-solid fa-check"></i>
+                    <div>
+                        <h4>Frontend Interface</h4>
+                        <p>Landing, recommendation, about, and contact pages — the stage you're looking at right now.</p>
+                    </div>
+                </div>
+
+                <div class="status-item upcoming">
+                    <i class="fa-solid fa-server"></i>
+                    <div>
+                        <h4>Backend &amp; Database</h4>
+                        <p>A Flask REST API backed by MySQL to store farm profiles and recommendation history.</p>
+                    </div>
+                </div>
+
+                <div class="status-item upcoming">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <div>
+                        <h4>Full Integration</h4>
+                        <p>Connecting the trained model to the backend so the form returns real recommendations.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AgriSense &mdash; Built by Abdullah P I | Innolift Ventures Internship</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | AgriSense</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <a class="logo" href="index.html">
+                <i class="fa-solid fa-seedling"></i>
+                AgriSense
+            </a>
+
+            <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
+            <label class="nav-toggle" for="navToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="current" href="contact.html">Contact</a></li>
+                <li><a class="nav-cta" href="recommend.html">Get Recommendation</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="contact">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">
+                Questions, feedback, or ideas about AgriSense? Send a message.
+            </p>
+
+            <div class="recommend-layout">
+                <form class="form-card" action="#" method="post">
+
+                    <div class="form-grid">
+
+                        <div class="field field-full">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name">
+                        </div>
+
+                        <div class="field field-full">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com">
+                        </div>
+
+                        <div class="field field-full">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us what's on your mind"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Send Message</button>
+                        <p class="form-note">
+                            This form is a UI preview. It isn't connected to a backend yet.
+                        </p>
+                    </div>
+
+                </form>
+
+                <aside class="info-panel">
+                    <div>
+                        <p class="result-label">Reach out</p>
+                        <h3>Let's talk AgriSense</h3>
+                    </div>
+                    <ul class="info-list">
+                        <li>
+                            <i class="fa-solid fa-code-branch"></i>
+                            <a href="https://github.com/abdullahpi912/Smart-Crop-Advisory-Platform" target="_blank" rel="noopener">
+                                View the project on GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-seedling"></i>
+                            <span>Built during the Innolift Ventures Full Stack AI Developer Program</span>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AgriSense &mdash; Built by Abdullah P I | Innolift Ventures Internship</p>
+    </footer>
+
+</body>
+
+</html>
