@@ -4,33 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah P I | Portfolio</title>
+    <title>Abdullah P I | AI & Data Science Specialist</title>
+    <meta name="description" content="Portfolio of Abdullah P I - B.Tech AI & DS student passionate about Machine Learning, Data Analytics, and Intelligent Software Solutions.">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- Background Light Blobs -->
+    <div class="ambient-blob blob-1" aria-hidden="true"></div>
+    <div class="ambient-blob blob-2" aria-hidden="true"></div>
+    <div class="ambient-blob blob-3" aria-hidden="true"></div>
 
-    <header>
-
-        <nav class="navbar">
-
-            <h2 class="logo">
-                <img class="logo-img" src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='10' fill='%232563eb'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Poppins,sans-serif' font-size='18' fill='%23ffffff'%3EA%3C/text%3E%3C/svg%3E" alt="Logo">
-            </h2>
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main Navigation">
+            <a href="#home" class="logo" aria-label="Abdullah Home">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="36" height="36" rx="10" fill="url(#logo-grad)"/>
+                        <path d="M18 8L26 27H21.5L19.8 23H16.2L14.5 27H10L18 8ZM18 13.2L16.9 20H19.1L18 13.2Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-grad" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#6366f1"/>
+                                <stop offset="1" stop-color="#06b6d4"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">Abdullah</span>
+            </a>
 
             <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
             <label class="nav-toggle" for="navToggle" aria-label="Toggle navigation menu">
@@ -40,36 +53,23 @@
             </label>
 
             <ul class="nav-links" id="navLinks">
-
-                <li><a href="#home">Home</a></li>
-
-                <li><a href="#about">About</a></li>
-
-                <li><a href="#education">Education</a></li>
-
-                <li><a href="#skills">Skills</a></li>
-
-                <li><a href="#projects">Projects</a></li>
-
-                <li><a href="#certifications">Certificates</a></li>
-
-                <li><a href="#contact">Contact</a></li>
-
+                <li><a href="#home" class="active"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#skills"><i class="fa-solid fa-code"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fa-solid fa-folder-open"></i> Projects</a></li>
+                <li><a href="#certifications"><i class="fa-solid fa-certificate"></i> Certificates</a></li>
+                <li><a href="#contact" class="nav-cta"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
             </ul>
-
         </nav>
-
     </header>
 
-    <!-- ================= HERO ================= -->
+    <main id="main-content">
 
-    <main>
-
+        <!-- ================= HERO SECTION ================= -->
         <section class="hero" id="home">
-
-            <svg class="hero-graph" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
-                focusable="false">
-                <g stroke="#2563eb" stroke-opacity="0.16" stroke-width="1.2">
+            <svg class="hero-graph" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <g stroke="url(#hero-line-gradient)" stroke-opacity="0.2" stroke-width="1.5">
                     <line x1="120" y1="120" x2="300" y2="80" />
                     <line x1="300" y1="80" x2="520" y2="150" />
                     <line x1="520" y1="150" x2="760" y2="90" />
@@ -86,391 +86,657 @@
                     <line x1="480" y1="340" x2="700" y2="310" />
                     <line x1="700" y1="310" x2="900" y2="380" />
                     <line x1="900" y1="380" x2="1050" y2="470" />
-                    <line x1="60" y1="320" x2="180" y2="480" />
-                    <line x1="260" y1="300" x2="420" y2="520" />
-                    <line x1="480" y1="340" x2="420" y2="520" />
-                    <line x1="700" y1="310" x2="640" y2="480" />
-                    <line x1="900" y1="380" x2="860" y2="540" />
-                    <line x1="180" y1="480" x2="420" y2="520" />
-                    <line x1="420" y1="520" x2="640" y2="480" />
-                    <line x1="640" y1="480" x2="860" y2="540" />
                 </g>
-                <g>
-                    <circle cx="120" cy="120" r="3" fill="#2563eb" />
-                    <circle cx="300" cy="80" r="3" fill="#06b6d4" />
-                    <circle cx="520" cy="150" r="3" fill="#2563eb" />
-                    <circle cx="760" cy="90" r="3" fill="#06b6d4" />
-                    <circle cx="980" cy="140" r="3" fill="#2563eb" />
-                    <circle cx="1100" cy="260" r="3" fill="#06b6d4" />
-                    <circle cx="60" cy="320" r="3" fill="#2563eb" />
-                    <circle cx="260" cy="300" r="3" fill="#06b6d4" />
-                    <circle cx="480" cy="340" r="3" fill="#2563eb" />
-                    <circle cx="700" cy="310" r="3" fill="#06b6d4" />
-                    <circle cx="900" cy="380" r="3" fill="#2563eb" />
-                    <circle cx="1050" cy="470" r="3" fill="#06b6d4" />
-                    <circle cx="180" cy="480" r="3" fill="#2563eb" />
-                    <circle cx="420" cy="520" r="3" fill="#06b6d4" />
-                    <circle cx="640" cy="480" r="3" fill="#2563eb" />
-                    <circle cx="860" cy="540" r="3" fill="#06b6d4" />
+                <defs>
+                    <linearGradient id="hero-line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#6366f1" />
+                        <stop offset="50%" stop-color="#06b6d4" />
+                        <stop offset="100%" stop-color="#10b981" />
+                    </linearGradient>
+                </defs>
+                <g class="graph-nodes">
+                    <circle cx="120" cy="120" r="4" fill="#6366f1" />
+                    <circle cx="300" cy="80" r="5" fill="#06b6d4" />
+                    <circle cx="520" cy="150" r="4" fill="#6366f1" />
+                    <circle cx="760" cy="90" r="5" fill="#10b981" />
+                    <circle cx="980" cy="140" r="4" fill="#06b6d4" />
+                    <circle cx="1100" cy="260" r="5" fill="#6366f1" />
+                    <circle cx="60" cy="320" r="4" fill="#10b981" />
+                    <circle cx="260" cy="300" r="5" fill="#6366f1" />
+                    <circle cx="480" cy="340" r="4" fill="#06b6d4" />
+                    <circle cx="700" cy="310" r="5" fill="#6366f1" />
+                    <circle cx="900" cy="380" r="4" fill="#10b981" />
+                    <circle cx="1050" cy="470" r="5" fill="#06b6d4" />
                 </g>
             </svg>
 
-            <article class="hero-text">
+            <div class="hero-content">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span>Available for AI / ML Internships & Opportunities</span>
+                </div>
 
-                <h3>Hello, I'm</h3>
+                <h1 class="hero-title">
+                    Hello, I'm <span class="gradient-text">Abdullah P I</span>
+                </h1>
 
-                <h1>Abdullah P I</h1>
+                <h2 class="hero-subtitle">
+                    <i class="fa-solid fa-microchip"></i> B.Tech AI & Data Science Specialist
+                </h2>
 
-                <h2>B.Tech AI & DS Student</h2>
-
-                <p>
-
-                    Passionate Artificial Intelligence and Data Science student
-
-                    who loves building Machine Learning solutions, analyzing data,
-
-                    and developing real-world intelligent applications.
-
+                <p class="hero-description">
+                    Passionate Artificial Intelligence & Data Science student dedicated to building high-performance 
+                    Machine Learning models, turning complex data into actionable insights, and creating real-world intelligent applications.
                 </p>
 
                 <div class="hero-buttons">
-
-                    <a href="#projects" class="btn">View Projects</a>
-
-                    <a href="#contact" class="btn-outline">Contact Me</a>
-
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Explore Projects</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Contact Me</span>
+                    </a>
+                    <a href="https://github.com/abdullahpi912" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="GitHub Profile">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
                 </div>
 
-            </article>
-
-        </section>
-
-        <!-- ================= ABOUT ================= -->
-
-        <section id="about" class="about">
-
-            <h2 class="section-title">About Me</h2>
-
-            <article class="about-container">
-
-                <div class="about-content">
-
-                    <p>
-
-                        I am Abdullah P I, currently pursuing a Bachelor of Technology
-
-                        in Artificial Intelligence & Data Science at
-
-                        B.S. Abdur Rahman Crescent Institute of Science and Technology.
-
-                    </p>
-
-                    <p>
-
-                        I enjoy solving real-world problems using Machine Learning,
-
-                        Data Analysis, and Python programming.
-
-                        My goal is to become a skilled Machine Learning Engineer
-
-                        and contribute to innovative AI solutions.
-
-                    </p>
-
-                    <div class="info-grid">
-
-                        <div>
-
-                            <strong>Name</strong>
-
-                            <p>Abdullah P I</p>
-
+                <!-- Stats Grid Banner -->
+                <div class="stats-grid">
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">9.80</span>
+                            <span class="stat-label">Current CGPA</span>
                         </div>
-
-                        <div>
-
-                            <strong>Location</strong>
-
-                            <p>India</p>
-
-                        </div>
-
-                        <div>
-
-                            <strong>Email</strong>
-
-                            <p>abdullahpi912@gmail.com</p>
-
-                        </div>
-
-                        <div>
-
-                            <strong>Degree</strong>
-
-                            <p>B.Tech AI & DS</p>
-
-                        </div>
-
                     </div>
-
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Core Tech Skills</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">ML Projects</span>
+                        </div>
+                    </div>
                 </div>
-
-            </article>
-
+            </div>
         </section>
 
-        <!-- ================= EDUCATION ================= -->
+        <!-- ================= ABOUT SECTION ================= -->
+        <section id="about" class="section about">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-sparkles"></i> Overview</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
 
-        <section id="education" class="education">
+            <div class="about-grid">
+                <article class="about-bio-card glass-card">
+                    <h3>Building Intelligent Systems & Data Workflows</h3>
+                    <p>
+                        I am currently pursuing a Bachelor of Technology in <strong>Artificial Intelligence & Data Science</strong> at 
+                        <em>B.S. Abdur Rahman Crescent Institute of Science and Technology</em>.
+                    </p>
+                    <p>
+                        My core focus lies in solving real-world challenges using Python, Machine Learning algorithms, 
+                        Exploratory Data Analysis (EDA), and SQL data querying. I strive to bridge the gap between complex raw data and strategic machine intelligence.
+                    </p>
+                    <div class="focus-pills">
+                        <span class="pill"><i class="fa-solid fa-robot"></i> Machine Learning</span>
+                        <span class="pill"><i class="fa-solid fa-chart-line"></i> Exploratory Data Analysis</span>
+                        <span class="pill"><i class="fa-brands fa-python"></i> Python Workflows</span>
+                        <span class="pill"><i class="fa-solid fa-database"></i> SQL Querying</span>
+                        <span class="pill"><i class="fa-solid fa-chart-pie"></i> Power BI Dashboards</span>
+                    </div>
+                </article>
 
-            <h2 class="section-title">Education</h2>
-
-            <article class="education-card">
-
-                <i class="fa-solid fa-graduation-cap"></i>
-
-                <div>
-
-                    <h3>
-
-                        B.S. Abdur Rahman Crescent Institute
-
-                        of Science and Technology
-
-                    </h3>
-
-                    <h4>
-
-                        Bachelor of Technology
-
-                        (Artificial Intelligence & Data Science)
-
-                    </h4>
-
-                    <p>2024 – 2028</p>
-
-                    <span>Current CGPA : 9.80</span>
-
-                </div>
-
-            </article>
-
+                <article class="about-info-card glass-card">
+                    <h3>Quick Facts</h3>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-id-card"></i></div>
+                            <div>
+                                <span class="info-label">Full Name</span>
+                                <span class="info-value">Abdullah P I</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div>
+                                <span class="info-label">Degree Program</span>
+                                <span class="info-value">B.Tech AI & Data Science</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">India</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <span class="info-label">Email</span>
+                                <a href="mailto:abdullahpi912@gmail.com" class="info-link">abdullahpi912@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            <div>
+                                <span class="info-label">Target Role</span>
+                                <span class="info-value highlight-green">Machine Learning Engineer / Data Scientist</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <!-- ================= SKILLS ================= -->
+        <!-- ================= EDUCATION SECTION ================= -->
+        <section id="education" class="section education">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-book-open"></i> Academic Background</span>
+                <h2 class="section-title">Education</h2>
+                <div class="title-underline"></div>
+            </div>
 
-        <section id="skills" class="skills">
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <article class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2024 – 2028</span>
+                                <h3 class="timeline-degree">Bachelor of Technology (B.Tech)</h3>
+                                <h4 class="timeline-institution">
+                                    <i class="fa-solid fa-building-columns"></i> B.S. Abdur Rahman Crescent Institute of Science and Technology
+                                </h4>
+                                <p class="timeline-field">Major: Artificial Intelligence & Data Science</p>
+                            </div>
+                            <div class="cgpa-badge">
+                                <span class="cgpa-val">9.80</span>
+                                <span class="cgpa-max">/ 10.0 CGPA</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Demonstrating consistent academic performance with deep engagement in machine learning principles, database architectures, and data structures.</p>
+                            <div class="coursework-tags">
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Exploratory Data Analysis</span>
+                                <span class="tag">Python Programming</span>
+                                <span class="tag">Data Structures & Algorithms</span>
+                                <span class="tag">SQL & Relational Databases</span>
+                                <span class="tag">Linear Algebra & Probability</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-            <h2 class="section-title">Skills</h2>
+        <!-- ================= SKILLS SECTION ================= -->
+        <section id="skills" class="section skills">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-gears"></i> Expertise & Tools</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
 
-            <div class="skills-container">
-
-                <article class="skill-card">
+            <div class="skills-grid">
+                <!-- Skill 1 -->
+                <article class="skill-card glass-card">
                     <div class="skill-card-top">
-                        <div class="skill-icon"><i class="fa-brands fa-python" aria-hidden="true"></i></div>
-                        <span class="skill-category">Programming</span>
+                        <div class="skill-icon python-bg"><i class="fa-brands fa-python"></i></div>
+                        <span class="skill-category">Core Language</span>
                     </div>
                     <h3>Python</h3>
-                    <p>Building scripts, data workflows, and machine learning models.</p>
-                    <div class="skill-meter" role="img" aria-label="Python proficiency: advanced"><span style="--skill-level: 92%"></span></div>
+                    <p>Writing scalable scripts, data processing pipelines, ML modeling, and numerical computing.</p>
+                    <div class="skill-meta">
+                        <span>Proficiency</span>
+                        <span class="skill-percent">92%</span>
+                    </div>
+                    <div class="skill-meter" role="img" aria-label="Python proficiency 92%"><span style="--skill-level: 92%"></span></div>
                 </article>
 
-                <article class="skill-card">
+                <!-- Skill 2 -->
+                <article class="skill-card glass-card">
                     <div class="skill-card-top">
-                        <div class="skill-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
-                        <span class="skill-category">Data querying</span>
+                        <div class="skill-icon ml-bg"><i class="fa-solid fa-brain"></i></div>
+                        <span class="skill-category">AI / Modeling</span>
+                    </div>
+                    <h3>Machine Learning</h3>
+                    <p>Building classification and regression models, model evaluation, and scikit-learn pipelines.</p>
+                    <div class="skill-meta">
+                        <span>Proficiency</span>
+                        <span class="skill-percent">86%</span>
+                    </div>
+                    <div class="skill-meter" role="img" aria-label="Machine Learning proficiency 86%"><span style="--skill-level: 86%"></span></div>
+                </article>
+
+                <!-- Skill 3 -->
+                <article class="skill-card glass-card">
+                    <div class="skill-card-top">
+                        <div class="skill-icon eda-bg"><i class="fa-solid fa-chart-line"></i></div>
+                        <span class="skill-category">Analytics</span>
+                    </div>
+                    <h3>Exploratory Data Analysis (EDA)</h3>
+                    <p>Uncovering distributions, feature correlations, and data insights using Pandas, Matplotlib & Seaborn.</p>
+                    <div class="skill-meta">
+                        <span>Proficiency</span>
+                        <span class="skill-percent">88%</span>
+                    </div>
+                    <div class="skill-meter" role="img" aria-label="EDA proficiency 88%"><span style="--skill-level: 88%"></span></div>
+                </article>
+
+                <!-- Skill 4 -->
+                <article class="skill-card glass-card">
+                    <div class="skill-card-top">
+                        <div class="skill-icon sql-bg"><i class="fa-solid fa-database"></i></div>
+                        <span class="skill-category">Data Querying</span>
                     </div>
                     <h3>SQL</h3>
-                    <p>Extracting, joining, and organizing data for analysis.</p>
-                    <div class="skill-meter" role="img" aria-label="SQL proficiency: proficient"><span style="--skill-level: 82%"></span></div>
+                    <p>Designing relational queries, joins, aggregates, and structured data extraction for analysis.</p>
+                    <div class="skill-meta">
+                        <span>Proficiency</span>
+                        <span class="skill-percent">82%</span>
+                    </div>
+                    <div class="skill-meter" role="img" aria-label="SQL proficiency 82%"><span style="--skill-level: 82%"></span></div>
                 </article>
 
-                <article class="skill-card">
+                <!-- Skill 5 -->
+                <article class="skill-card glass-card">
                     <div class="skill-card-top">
-                        <div class="skill-icon"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i></div>
+                        <div class="skill-icon bi-bg"><i class="fa-solid fa-chart-simple"></i></div>
                         <span class="skill-category">Visualization</span>
                     </div>
                     <h3>Power BI</h3>
-                    <p>Creating focused dashboards that make insights easy to act on.</p>
-                    <div class="skill-meter" role="img" aria-label="Power BI proficiency: proficient"><span style="--skill-level: 78%"></span></div>
+                    <p>Creating interactive business intelligence dashboards, DAX calculations, and visual reports.</p>
+                    <div class="skill-meta">
+                        <span>Proficiency</span>
+                        <span class="skill-percent">78%</span>
+                    </div>
+                    <div class="skill-meter" role="img" aria-label="Power BI proficiency 78%"><span style="--skill-level: 78%"></span></div>
                 </article>
 
-                <article class="skill-card">
+                <!-- Skill 6 -->
+                <article class="skill-card glass-card">
                     <div class="skill-card-top">
-                        <div class="skill-icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
-                        <span class="skill-category">Model development</span>
+                        <div class="skill-icon cpp-bg"><i class="fa-solid fa-code"></i></div>
+                        <span class="skill-category">Core Programming</span>
                     </div>
-                    <h3>Machine Learning</h3>
-                    <p>Training and evaluating models for real-world prediction tasks.</p>
-                    <div class="skill-meter" role="img" aria-label="Machine Learning proficiency: proficient"><span style="--skill-level: 84%"></span></div>
-                </article>
-
-                <article class="skill-card">
-                    <div class="skill-card-top">
-                        <div class="skill-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
-                        <span class="skill-category">Data analysis</span>
+                    <h3>C / C++</h3>
+                    <p>Fundamental programming logic, data structures, object-oriented concepts, and memory efficiency.</p>
+                    <div class="skill-meta">
+                        <span>Proficiency</span>
+                        <span class="skill-percent">80%</span>
                     </div>
-                    <h3>EDA</h3>
-                    <p>Finding patterns, outliers, and stories hidden in raw datasets.</p>
-                    <div class="skill-meter" role="img" aria-label="Exploratory Data Analysis proficiency: advanced"><span style="--skill-level: 88%"></span></div>
+                    <div class="skill-meter" role="img" aria-label="C and C++ proficiency 80%"><span style="--skill-level: 80%"></span></div>
                 </article>
-
             </div>
-
         </section>
 
-        <!-- ================= PROJECTS ================= -->
+        <!-- ================= PROJECTS SECTION ================= -->
+        <section id="projects" class="section projects">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-laptop-code"></i> Practical Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
 
-        <section id="projects" class="projects">
-
-            <h2 class="section-title">Projects</h2>
-
-            <div class="project-container">
-
-                <article class="project-card">
-
-                    <div class="project-card-image">
-                        <img src="Project_images/Crop_detection.png" alt="Camera monitoring crops in a field">
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <article class="project-card glass-card">
+                    <div class="project-image-wrapper">
+                        <img src="Project_images/Crop_detection.png" alt="Smart Crop Recommendation System dashboard preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="overlay-badge"><i class="fa-solid fa-seedling"></i> Agriculture AI</span>
+                        </div>
                     </div>
-
-                    <div class="project-card-body">
-
-                        <h3>Smart Crop Recommendation System</h3>
-
-                        <p>
-
-                            Developed a Machine Learning model that recommends
-                            suitable crops based on soil and environmental
-                            conditions.
-
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-category">Machine Learning System</span>
+                            <h3>Smart Crop Recommendation System</h3>
+                        </div>
+                        <p class="project-description">
+                            Engineered an intelligent ML model that recommends optimal crop cultivation choices based on soil properties (NPK values, pH levels) and weather metrics.
                         </p>
-
-                        <h4>Tech Stack</h4>
-
-                        <span>
-                            Python | Pandas | NumPy | Scikit-learn |
-                            Matplotlib | Seaborn
-                        </span>
-
+                        <div class="project-highlights">
+                            <span><i class="fa-solid fa-check"></i> High accuracy multi-class classification</span>
+                            <span><i class="fa-solid fa-check"></i> Feature engineering & environmental correlation</span>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">NumPy</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                            <span class="tech-badge">Matplotlib</span>
+                            <span class="tech-badge">Seaborn</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/abdullahpi912" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                                <i class="fa-brands fa-github"></i> View Code
+                            </a>
+                        </div>
                     </div>
-
                 </article>
 
-
-                <article class="project-card">
-
-                    <div class="project-card-image">
-                        <img src="Project_images/OIP.webp" alt="Neon heart and medical signal representing heart disease prediction">
+                <!-- Project 2 -->
+                <article class="project-card glass-card">
+                    <div class="project-image-wrapper">
+                        <img src="Project_images/OIP.webp" alt="Heart Disease Prediction System diagnostic visualization" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="overlay-badge"><i class="fa-solid fa-heart-pulse"></i> Healthcare AI</span>
+                        </div>
                     </div>
-
-                    <div class="project-card-body">
-
-                        <h3>Heart Disease Prediction System</h3>
-
-                        <p>
-
-                            Developed a prediction model using patient medical
-                            records to identify the possibility of heart disease.
-
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-category">Predictive Healthcare ML</span>
+                            <h3>Heart Disease Prediction System</h3>
+                        </div>
+                        <p class="project-description">
+                            Developed a predictive decision support model using clinical patient records to identify early risk indicators of cardiovascular heart disease.
                         </p>
-
-                        <h4>Tech Stack</h4>
-
-                        <span>
-                            Python | Pandas | Scikit-learn | Matplotlib
-                        </span>
-
+                        <div class="project-highlights">
+                            <span><i class="fa-solid fa-check"></i> Medical dataset cleaning & normalization</span>
+                            <span><i class="fa-solid fa-check"></i> Model evaluation with Precision/Recall metrics</span>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">EDA</span>
+                            <span class="tech-badge">Matplotlib</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/abdullahpi912" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                                <i class="fa-brands fa-github"></i> View Code
+                            </a>
+                        </div>
                     </div>
-
                 </article>
-
             </div>
-
         </section>
 
-        <!-- ================= CERTIFICATIONS ================= -->
-
-        <section id="certifications" class="certifications">
-
-            <h2 class="section-title">Certifications</h2>
-
-            <div class="certificate-container">
-
-                <article class="certificate-card">
-                    <a href="images/image2.png" target="_blank" rel="noopener">View Python Training Certificate</a>
-                    <figcaption>Python Training</figcaption>
-                </article>
-
-                <article class="certificate-card">
-                    <a href="images/image5.png" target="_blank" rel="noopener">View C Training Certificate</a>
-                    <figcaption>C Training</figcaption>
-                </article>
-
-                <article class="certificate-card">
-                    <a href="images/image4.png" target="_blank" rel="noopener">View Advanced C++ Certificate</a>
-                    <figcaption>Advanced C++</figcaption>
-                </article>
-
-                <article class="certificate-card">
-                    <a href="images/image6.png" target="_blank" rel="noopener">View Linux Training Certificate</a>
-                    <figcaption>Linux Training</figcaption>
-                </article>
-
-                <article class="certificate-card">
-                    <a href="images/image3.png" target="_blank" rel="noopener">View IBM Machine Learning Certificate</a>
-                    <figcaption>IBM Machine Learning</figcaption>
-                </article>
-
-                <article class="certificate-card">
-                    <a href="images/image1.png" target="_blank" rel="noopener">View Power BI Workshop Certificate</a>
-                    <figcaption>Power BI Workshop</figcaption>
-                </article>
-
+        <!-- ================= CERTIFICATIONS SECTION ================= -->
+        <section id="certifications" class="section certifications">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-award"></i> Qualifications</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="title-underline"></div>
             </div>
 
+            <div class="certificates-grid">
+                <!-- Cert 1 -->
+                <article class="certificate-card glass-card">
+                    <div class="cert-image-box">
+                        <img src="images/image3.png" alt="IBM Machine Learning Certificate preview" loading="lazy">
+                        <a href="images/image3.png" target="_blank" rel="noopener" class="cert-zoom-btn" aria-label="View IBM Machine Learning Certificate">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> View
+                        </a>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-issuer"><i class="fa-solid fa-building"></i> IBM</span>
+                        <h3>IBM Machine Learning</h3>
+                        <p>Supervised learning algorithms, regression analysis, and ML pipelines.</p>
+                        <a href="images/image3.png" target="_blank" rel="noopener" class="cert-link">
+                            <span>View Full Certificate</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Cert 2 -->
+                <article class="certificate-card glass-card">
+                    <div class="cert-image-box">
+                        <img src="images/image2.png" alt="Python Training Certificate preview" loading="lazy">
+                        <a href="images/image2.png" target="_blank" rel="noopener" class="cert-zoom-btn" aria-label="View Python Training Certificate">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> View
+                        </a>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-issuer"><i class="fa-brands fa-python"></i> IIT Bombay / Spoken Tutorial</span>
+                        <h3>Python Training</h3>
+                        <p>Core Python programming, data structures, and script automation.</p>
+                        <a href="images/image2.png" target="_blank" rel="noopener" class="cert-link">
+                            <span>View Full Certificate</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Cert 3 -->
+                <article class="certificate-card glass-card">
+                    <div class="cert-image-box">
+                        <img src="images/image1.png" alt="Power BI Workshop Certificate preview" loading="lazy">
+                        <a href="images/image1.png" target="_blank" rel="noopener" class="cert-zoom-btn" aria-label="View Power BI Workshop Certificate">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> View
+                        </a>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-issuer"><i class="fa-solid fa-chart-pie"></i> Power BI Workshop</span>
+                        <h3>Power BI Workshop</h3>
+                        <p>Business analytics, DAX calculations, and interactive dashboard reports.</p>
+                        <a href="images/image1.png" target="_blank" rel="noopener" class="cert-link">
+                            <span>View Full Certificate</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Cert 4 -->
+                <article class="certificate-card glass-card">
+                    <div class="cert-image-box">
+                        <img src="images/image4.png" alt="Advanced C++ Certificate preview" loading="lazy">
+                        <a href="images/image4.png" target="_blank" rel="noopener" class="cert-zoom-btn" aria-label="View Advanced C++ Certificate">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> View
+                        </a>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-issuer"><i class="fa-solid fa-code"></i> Advanced Programming</span>
+                        <h3>Advanced C++ Training</h3>
+                        <p>Object-oriented design, STL containers, pointers, and memory management.</p>
+                        <a href="images/image4.png" target="_blank" rel="noopener" class="cert-link">
+                            <span>View Full Certificate</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Cert 5 -->
+                <article class="certificate-card glass-card">
+                    <div class="cert-image-box">
+                        <img src="images/image5.png" alt="C Training Certificate preview" loading="lazy">
+                        <a href="images/image5.png" target="_blank" rel="noopener" class="cert-zoom-btn" aria-label="View C Training Certificate">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> View
+                        </a>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-issuer"><i class="fa-solid fa-terminal"></i> IIT Bombay / Spoken Tutorial</span>
+                        <h3>C Training</h3>
+                        <p>Procedural programming fundamentals, control flow, functions, and arrays.</p>
+                        <a href="images/image5.png" target="_blank" rel="noopener" class="cert-link">
+                            <span>View Full Certificate</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Cert 6 -->
+                <article class="certificate-card glass-card">
+                    <div class="cert-image-box">
+                        <img src="images/image6.png" alt="Linux Training Certificate preview" loading="lazy">
+                        <a href="images/image6.png" target="_blank" rel="noopener" class="cert-zoom-btn" aria-label="View Linux Training Certificate">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> View
+                        </a>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-issuer"><i class="fa-brands fa-linux"></i> Linux Administration</span>
+                        <h3>Linux Training</h3>
+                        <p>Linux environment, shell commands, file systems, and permissions.</p>
+                        <a href="images/image6.png" target="_blank" rel="noopener" class="cert-link">
+                            <span>View Full Certificate</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <!-- ================= CONTACT ================= -->
+        <!-- ================= CONTACT SECTION ================= -->
+        <section id="contact" class="section contact">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-envelope-open-text"></i> Reach Out</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Interested in collaborating or discussing AI/ML opportunities? Send me a message!</p>
+            </div>
 
-        <section id="contact" class="contact">
-
-            <h2 class="section-title">Contact Me</h2>
-
-            <article class="contact-card">
-
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-                    abdullahpi912@gmail.com
-                </p>
-
-                <p>
-                    <i class="fa-brands fa-github"></i>
-                    <a href="https://github.com/abdullahpi912" target="_blank">
-                        github.com/abdullahpi912
+            <div class="contact-grid">
+                <!-- Left: Contact Cards -->
+                <div class="contact-cards">
+                    <a href="mailto:abdullahpi912@gmail.com" class="contact-card glass-card">
+                        <div class="contact-icon email-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <span class="contact-label">Email Me</span>
+                            <span class="contact-val">abdullahpi912@gmail.com</span>
+                        </div>
                     </a>
-                </p>
 
-                <p>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/abdullah-p-i-816854320" target="_blank">
-                        linkedin.com/in/abdullah-p-i-816854320
+                    <a href="https://www.linkedin.com/in/abdullah-p-i-816854320" target="_blank" rel="noopener" class="contact-card glass-card">
+                        <div class="contact-icon linkedin-icon"><i class="fa-brands fa-linkedin"></i></div>
+                        <div>
+                            <span class="contact-label">Connect on LinkedIn</span>
+                            <span class="contact-val">linkedin.com/in/abdullah-p-i-816854320</span>
+                        </div>
                     </a>
-                </p>
 
-            </article>
+                    <a href="https://github.com/abdullahpi912" target="_blank" rel="noopener" class="contact-card glass-card">
+                        <div class="contact-icon github-icon"><i class="fa-brands fa-github"></i></div>
+                        <div>
+                            <span class="contact-label">Check GitHub</span>
+                            <span class="contact-val">github.com/abdullahpi912</span>
+                        </div>
+                    </a>
 
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon location-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <span class="contact-label">Location</span>
+                            <span class="contact-val">Tamil Nadu, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Contact Form -->
+                <form class="contact-form glass-card" onsubmit="event.preventDefault(); alert('Thank you for reaching out, Abdullah will get back to you shortly!'); this.reset();">
+                    <h3>Send a Message</h3>
+                    <div class="form-group">
+                        <label for="contactName"><i class="fa-solid fa-user"></i> Your Name</label>
+                        <input type="text" id="contactName" placeholder="e.g. John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail"><i class="fa-solid fa-at"></i> Your Email</label>
+                        <input type="email" id="contactEmail" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject"><i class="fa-solid fa-tag"></i> Subject</label>
+                        <input type="text" id="contactSubject" placeholder="Internship Opportunity / Inquiry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage"><i class="fa-solid fa-comment-dots"></i> Message</label>
+                        <textarea id="contactMessage" rows="4" placeholder="Hello Abdullah, I would like to connect with you regarding..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
         </section>
 
     </main>
 
     <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <p>© 2026 Abdullah P I | Designed & Developed by Abdullah P I</p>
-
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <div class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="36" height="36" rx="10" fill="url(#footer-logo-grad)"/>
+                            <path d="M18 8L26 27H21.5L19.8 23H16.2L14.5 27H10L18 8ZM18 13.2L16.9 20H19.1L18 13.2Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-grad" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#6366f1"/>
+                                    <stop offset="1" stop-color="#06b6d4"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Abdullah</span>
+                </a>
+                <p>Empowering decision-making through Artificial Intelligence and Data Science.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/abdullahpi912" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/abdullah-p-i-816854320" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:abdullahpi912@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Abdullah P I. All Rights Reserved. Designed & Built with Precision.</p>
+        </div>
     </footer>
 
+    <!-- Floating Scroll-to-Top Button -->
+    <a href="#home" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Interactivity Script -->
+    <script>
+        // Active link highlighting on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links li a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Scroll to top button visibility
+            const scrollTopBtn = document.querySelector('.scroll-top-btn');
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+    </script>
 </body>
 
 </html>

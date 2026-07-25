@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Library — AgriSense</title>
+    <meta name="description" content="Explore optimal soil, NPK nutrient ratios, pH, and climate requirements for 20+ major crops in the AgriSense Crop Intelligence Library.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Pure CSS Radio Filters for Crop Categories -->
+    <input type="radio" name="crop-category" id="cat-all" class="crop-cat-radio" checked>
+    <input type="radio" name="crop-category" id="cat-grains" class="crop-cat-radio">
+    <input type="radio" name="crop-category" id="cat-pulses" class="crop-cat-radio">
+    <input type="radio" name="crop-category" id="cat-fruits" class="crop-cat-radio">
+    <input type="radio" name="crop-category" id="cat-commercial" class="crop-cat-radio">
+
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">
+                <i class="fa-solid fa-seedling"></i>
+                AgriSense
+            </a>
+
+            <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
+            <label class="nav-toggle" for="navToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#faq">Soil FAQ</a></li>
+                <li><a class="current" href="crops.html">Crop Library</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="nav-cta" href="recommend.html">Get Recommendation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Crop Library Hero Section -->
+        <section id="crops-hero">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-book-open"></i> Agronomy Database</span>
+                <h2 class="section-title">Crop Intelligence Library</h2>
+                <p class="section-subtitle">
+                    Explore soil chemical requirements, rainfall limits, temperature thresholds, and growth cycles for supported agricultural crops.
+                </p>
+            </div>
+
+            <!-- Pure-CSS Category Filter Bar -->
+            <div class="crop-filter-wrapper">
+                <span class="filter-label"><i class="fa-solid fa-filter"></i> Filter Crop Category:</span>
+                <div class="crop-filter-tabs">
+                    <label for="cat-all" class="filter-btn">
+                        <i class="fa-solid fa-border-all"></i> All Crops (12)
+                    </label>
+                    <label for="cat-grains" class="filter-btn">
+                        🌾 Grains &amp; Cereals
+                    </label>
+                    <label for="cat-pulses" class="filter-btn">
+                        🌱 Pulses &amp; Legumes
+                    </label>
+                    <label for="cat-fruits" class="filter-btn">
+                        🍎 Fruits &amp; Orchard
+                    </label>
+                    <label for="cat-commercial" class="filter-btn">
+                        ☕ Cash Crops
+                    </label>
+                </div>
+            </div>
+
+            <!-- Crops Catalog Grid -->
+            <div class="crop-catalog-grid">
+
+                <!-- 1. Rice -->
+                <article class="crop-card cat-grains">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge">Grains &amp; Cereals</span>
+                        <div class="crop-card-icon">🌾</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Paddy Rice</h3>
+                        <p class="crop-tagline">Thrives in clayey moist soils with high water retention and warm temperatures.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>80-40-40 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>5.0 &ndash; 6.5 (Slightly Acidic)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>20&deg;C &ndash; 27&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>180 &ndash; 250 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> 110-140 Days</span>
+                            <a href="#crop-modal-rice" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Maize -->
+                <article class="crop-card cat-grains">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge">Grains &amp; Cereals</span>
+                        <div class="crop-card-icon">🌽</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Maize (Corn)</h3>
+                        <p class="crop-tagline">High-yielding cereal requiring moderate Nitrogen and well-drained loamy soil.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>90-42-43 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>5.5 &ndash; 7.0 (Neutral)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>18&deg;C &ndash; 27&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>80 &ndash; 110 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> 90-120 Days</span>
+                            <a href="#crop-modal-maize" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Wheat -->
+                <article class="crop-card cat-grains">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge">Grains &amp; Cereals</span>
+                        <div class="crop-card-icon">🥖</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Wheat</h3>
+                        <p class="crop-tagline">Cool-climate grain performing best in fertile, well-drained silt loam soils.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>50-30-20 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>6.0 &ndash; 7.5 (Neutral)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>12&deg;C &ndash; 22&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>50 &ndash; 90 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> 100-130 Days</span>
+                            <a href="#crop-modal-wheat" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Chickpea -->
+                <article class="crop-card cat-pulses">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge" style="background: rgba(229, 169, 60, 0.15); color: var(--accent-gold);">Pulses &amp; Legumes</span>
+                        <div class="crop-card-icon">🧆</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Chickpea (Gram)</h3>
+                        <p class="crop-tagline">Drought-tolerant pulse crop that enriches soil through atmospheric Nitrogen fixation.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>40-60-80 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>6.0 &ndash; 8.0 (Neutral to Alkaline)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>17&deg;C &ndash; 24&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>40 &ndash; 70 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> 90-110 Days</span>
+                            <a href="#crop-modal-chickpea" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Kidney Beans -->
+                <article class="crop-card cat-pulses">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge" style="background: rgba(229, 169, 60, 0.15); color: var(--accent-gold);">Pulses &amp; Legumes</span>
+                        <div class="crop-card-icon">🫘</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Kidney Beans (Rajma)</h3>
+                        <p class="crop-tagline">Protein-rich legume requiring high Phosphorus levels and light friable soil.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>20-60-20 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>5.5 &ndash; 6.5 (Slightly Acidic)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>18&deg;C &ndash; 25&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>60 &ndash; 110 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> 80-100 Days</span>
+                            <a href="#crop-modal-beans" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Lentil -->
+                <article class="crop-card cat-pulses">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge" style="background: rgba(229, 169, 60, 0.15); color: var(--accent-gold);">Pulses &amp; Legumes</span>
+                        <div class="crop-card-icon">🌱</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Lentil (Masoor)</h3>
+                        <p class="crop-tagline">Resilient legume requiring low Nitrogen and moderate seasonal moisture.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>18-68-19 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>6.0 &ndash; 7.5 (Neutral)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>18&deg;C &ndash; 30&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>35 &ndash; 55 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> 85-110 Days</span>
+                            <a href="#crop-modal-lentil" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7. Banana -->
+                <article class="crop-card cat-fruits">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge" style="background: rgba(217, 107, 67, 0.15); color: var(--accent-terracotta);">Fruits &amp; Orchard</span>
+                        <div class="crop-card-icon">🍌</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Banana</h3>
+                        <p class="crop-tagline">Heavy Potassium feeder thriving in tropical humid regions with rich organic matter.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>100-75-50 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>5.5 &ndash; 7.0 (Mildly Acidic)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>25&deg;C &ndash; 32&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>100 &ndash; 150 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> 300-365 Days</span>
+                            <a href="#crop-modal-banana" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8. Apple -->
+                <article class="crop-card cat-fruits">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge" style="background: rgba(217, 107, 67, 0.15); color: var(--accent-terracotta);">Fruits &amp; Orchard</span>
+                        <div class="crop-card-icon">🍎</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Apple</h3>
+                        <p class="crop-tagline">Temperate fruit crop needing well-drained soil, chilling hours, and high Potassium.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>20-135-200 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>5.5 &ndash; 6.8 (Slightly Acidic)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>15&deg;C &ndash; 24&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>100 &ndash; 125 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> Perennial</span>
+                            <a href="#crop-modal-apple" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 9. Mango -->
+                <article class="crop-card cat-fruits">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge" style="background: rgba(217, 107, 67, 0.15); color: var(--accent-terracotta);">Fruits &amp; Orchard</span>
+                        <div class="crop-card-icon">🥭</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Mango</h3>
+                        <p class="crop-tagline">Tropical fruit tree adaptable to deep, well-drained alluvial or red soils.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>20-25-30 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>5.5 &ndash; 7.5 (Wide pH Tolerance)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>24&deg;C &ndash; 35&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>90 &ndash; 100 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> Perennial</span>
+                            <a href="#crop-modal-mango" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 10. Cotton -->
+                <article class="crop-card cat-commercial">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge" style="background: rgba(59, 110, 71, 0.15); color: var(--primary-light);">Cash Crops</span>
+                        <div class="crop-card-icon">☁️</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Cotton</h3>
+                        <p class="crop-tagline">Commercial fiber crop performing best in deep black (regur) or alluvial soils.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>120-46-19 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>6.0 &ndash; 8.0 (Neutral to Alkaline)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>23&deg;C &ndash; 30&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>60 &ndash; 90 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> 150-180 Days</span>
+                            <a href="#crop-modal-cotton" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 11. Sugarcane -->
+                <article class="crop-card cat-commercial">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge" style="background: rgba(59, 110, 71, 0.15); color: var(--primary-light);">Cash Crops</span>
+                        <div class="crop-card-icon">🎋</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Sugarcane</h3>
+                        <p class="crop-tagline">High Nitrogen &amp; water-intensive commercial cash crop producing maximum sucrose in warm climates.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>100-50-50 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>6.0 &ndash; 7.5 (Neutral)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>25&deg;C &ndash; 35&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>110 &ndash; 160 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> 300-360 Days</span>
+                            <a href="#crop-modal-sugarcane" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 12. Coffee -->
+                <article class="crop-card cat-commercial">
+                    <div class="crop-card-header">
+                        <span class="crop-cat-badge" style="background: rgba(59, 110, 71, 0.15); color: var(--primary-light);">Cash Crops</span>
+                        <div class="crop-card-icon">☕</div>
+                    </div>
+                    <div class="crop-card-body">
+                        <h3>Coffee (Arabica / Robusta)</h3>
+                        <p class="crop-tagline">Highland plantation crop requiring acidic, shade-covered, humus-rich slopes.</p>
+                        
+                        <div class="crop-specs-list">
+                            <div class="spec-row">
+                                <span>Ideal NPK (N-P-K):</span>
+                                <strong>100-30-30 kg/ha</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Soil pH Range:</span>
+                                <strong>6.0 &ndash; 6.8 (Slightly Acidic)</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Optimum Temp:</span>
+                                <strong>23&deg;C &ndash; 28&deg;C</strong>
+                            </div>
+                            <div class="spec-row">
+                                <span>Seasonal Rainfall:</span>
+                                <strong>115 &ndash; 190 mm</strong>
+                            </div>
+                        </div>
+
+                        <div class="crop-card-footer">
+                            <span class="cycle-pill"><i class="fa-solid fa-clock"></i> Perennial</span>
+                            <a href="#crop-modal-coffee" class="crop-spec-link">Details <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CTA Callout -->
+        <section id="cta">
+            <div class="cta-banner">
+                <div class="cta-content">
+                    <h2>Test Your Soil Profile Against Our Crop Database</h2>
+                    <p>Enter your 7 field chemical parameters to receive an instant machine learning recommendation tailored to your land.</p>
+                    <a href="recommend.html" class="btn btn-terracotta">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Launch Simulator
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Crop Details Pure-CSS Modals -->
+    <div id="crop-modal-rice" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Paddy Rice (Oryza sativa)</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Rice is a staple cereal crop requiring heavy clay water retention, high seasonal rainfall (>180mm), and high humidity.
+            </p>
+            <ul style="display:flex; flex-direction:column; gap:0.75rem; font-size:0.92rem; color:var(--text-body); list-style:none;">
+                <li><i class="fa-solid fa-vial" style="color:var(--primary-light); width:20px;"></i> <strong>NPK Profile:</strong> High Nitrogen (80kg/ha), Moderate P &amp; K.</li>
+                <li><i class="fa-solid fa-gauge-high" style="color:var(--accent-gold); width:20px;"></i> <strong>pH Tolerance:</strong> 5.0 to 6.5 optimal.</li>
+                <li><i class="fa-solid fa-droplet" style="color:var(--primary-sage); width:20px;"></i> <strong>Water Needs:</strong> Standing water or flood irrigation during early vegetative phases.</li>
+            </ul>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="crop-modal-maize" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Maize (Zea mays)</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Maize requires well-drained loam soil rich in organic matter with balanced Nitrogen levels for strong stalk development.
+            </p>
+            <ul style="display:flex; flex-direction:column; gap:0.75rem; font-size:0.92rem; color:var(--text-body); list-style:none;">
+                <li><i class="fa-solid fa-vial" style="color:var(--primary-light); width:20px;"></i> <strong>NPK Profile:</strong> N: 90, P: 42, K: 43 kg/ha.</li>
+                <li><i class="fa-solid fa-temperature-half" style="color:var(--accent-terracotta); width:20px;"></i> <strong>Temperature Range:</strong> 18&deg;C to 27&deg;C.</li>
+                <li><i class="fa-solid fa-cloud-showers-heavy" style="color:#38bdf8; width:20px;"></i> <strong>Rainfall:</strong> 80mm &ndash; 110mm during growing season.</li>
+            </ul>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="crop-modal-wheat" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Wheat (Triticum aestivum)</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Wheat prefers cool growing seasons with moderate soil moisture and neutral pH levels.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="crop-modal-chickpea" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Chickpea (Cicer arietinum)</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Chickpea is a pulse crop that fixes atmospheric Nitrogen, requiring minimal synthetic fertilizer.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="crop-modal-beans" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Kidney Beans</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Kidney beans perform best in loose, well-drained soils with high Phosphorus and moderate moisture.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="crop-modal-lentil" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Lentil</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Lentils are semi-arid legumes suited to neutral soil pH and low water input.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="crop-modal-banana" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Banana</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Banana requires humid tropical conditions, high Potassium fertilization, and regular water supply.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="crop-modal-apple" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Apple</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Apples thrive in cool highland climates with well-drained loams and moderate winter chill.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="crop-modal-mango" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Mango</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Mangoes tolerate wide soil variations provided drainage is excellent and dry spells precede flowering.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="crop-modal-cotton" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Cotton</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Cotton yields best in deep clay or black soils with warm sunny seasons and high Nitrogen input.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="crop-modal-sugarcane" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Sugarcane</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Sugarcane requires long warm growth periods, heavy organic feeding, and ample soil water.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="crop-modal-coffee" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="modal-close" aria-label="Close dialog">&times;</a>
+            <span class="section-tag"><i class="fa-solid fa-leaf"></i> Crop Profile Specs</span>
+            <h3 style="font-size: 1.6rem; margin-block: 0.5rem 1rem; color: var(--primary);">Coffee</h3>
+            <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+                Coffee needs volcanic or acidic highland soil, shade canopy, and well-distributed rainfall.
+            </p>
+            <div style="margin-top: 1.5rem; text-align: right;">
+                <a href="#" class="btn btn-terracotta" style="padding: 0.6rem 1.4rem; font-size:0.9rem;">Close Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fa-solid fa-seedling" style="color: var(--accent-terracotta);"></i>
+                AgriSense
+            </div>
+            <p class="footer-text">
+                &copy; 2026 <strong>AgriSense</strong> &mdash; Designed by <strong>Abdullah P I</strong> | Built during the Innolift Ventures Internship
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
