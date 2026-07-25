@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Farm Profile — AgriSense</title>
+    <meta name="description" content="Create a new AgriSense farm profile account to save soil test history, track crop yield recommendations, and configure custom field parameters.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">
+                <i class="fa-solid fa-seedling"></i>
+                AgriSense
+            </a>
+
+            <input type="checkbox" id="navToggle" class="nav-toggle-checkbox">
+            <label class="nav-toggle" for="navToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recommend.html">Get Recommendation</a></li>
+                <li><a href="crops.html">Crop Library</a></li>
+                <li><a href="dashboard.html">History &amp; Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="nav-cta" href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="auth-container">
+                <div class="auth-card" style="max-width: 580px;">
+                    <div class="auth-header">
+                        <div class="auth-badge"><i class="fa-solid fa-user-plus"></i> Free Farm Account</div>
+                        <h2>Create Your Farm Profile</h2>
+                        <p>Register to securely store your field NPK logs, save historical crop ML predictions, and manage multi-plot data.</p>
+                    </div>
+
+                    <form class="auth-form" action="dashboard.html" method="get">
+                        <div class="form-grid">
+                            <div class="form-field form-field-full">
+                                <label for="fullname">Full Name / Farm Manager Name</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="fullname" name="fullname" placeholder="e.g. Abdullah P I" required class="input-control">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-field form-field-full">
+                                <label for="email">Email Address</label>
+                                <div class="input-wrapper">
+                                    <input type="email" id="email" name="email" placeholder="e.g. farmer@example.com" required class="input-control">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="region">Farm Location / District</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="region" name="region" placeholder="e.g. Kerala, India" required class="input-control">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="soil-type">Primary Soil Type</label>
+                                <div class="input-wrapper">
+                                    <select id="soil-type" name="soil-type" class="input-control select-control" required style="padding-left: 2.75rem;">
+                                        <option value="" disabled selected>Select Soil Category</option>
+                                        <option value="clayey">Clayey Soil</option>
+                                        <option value="loamy">Loamy Soil</option>
+                                        <option value="sandy">Sandy Soil</option>
+                                        <option value="alluvial">Alluvial Soil</option>
+                                        <option value="black">Black Cotton Soil</option>
+                                        <option value="red">Red / Laterite Soil</option>
+                                    </select>
+                                    <i class="fa-solid fa-mound" style="position: absolute; left: 1.1rem; top: 50%; transform: translateY(-50%); color: var(--primary-light);"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="password">Create Password</label>
+                                <div class="input-wrapper">
+                                    <input type="password" id="password" name="password" placeholder="Min. 8 characters" required class="input-control">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="confirm_password">Confirm Password</label>
+                                <div class="input-wrapper">
+                                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter password" required class="input-control">
+                                    <i class="fa-solid fa-shield-check"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-options" style="margin-top: 1rem;">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" required checked>
+                                <span>I agree to AgriSense Farm Advisory Terms and Data Privacy Policy</span>
+                            </label>
+                        </div>
+
+                        <div class="form-actions" style="margin-top: 1.5rem;">
+                            <button type="submit" class="btn btn-terracotta btn-block">
+                                <i class="fa-solid fa-user-plus"></i> Register Farm Profile
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="auth-footer">
+                        <p>Already registered? <a href="login.html" class="auth-accent-link">Sign In to Existing Account <i class="fa-solid fa-arrow-right"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-centered">
+        <div class="footer-content-centered">
+            <a class="logo" href="index.html">
+                <i class="fa-solid fa-seedling"></i> AgriSense
+            </a>
+            <p class="footer-tagline">Smart soil-to-crop advisory platform powered by machine learning.</p>
+            <p class="footer-copyright">&copy; 2026 AgriSense Precision Advisory. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
