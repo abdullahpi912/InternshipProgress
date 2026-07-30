@@ -1,0 +1,149 @@
+:root {
+  --primary-dark: #192b1e;
+  --primary: #24422e;
+  --sage: #3b6e47;
+  --clay: #d96b43;
+  --gold: #e5a93c;
+  --sand: #faf8f3;
+  --canvas: #f2efe6;
+  --error-red: #b3261e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--canvas);
+  color: var(--primary-dark);
+}
+
+.form-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--sand);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(25, 43, 30, 0.12);
+}
+
+.register-card h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.form-subtitle {
+  margin: 0 0 1.75rem;
+  font-size: 0.85rem;
+  color: var(--sage);
+}
+
+.field {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--primary);
+}
+
+input, select {
+  padding: 0.65rem 0.75rem;
+  border: 1.5px solid #d8d2c4;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fff;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--sage);
+}
+
+/* live validation states */
+input.input-valid, select.input-valid {
+  border-color: var(--sage);
+}
+
+input.input-error, select.input-error {
+  border-color: var(--error-red);
+}
+
+.error-msg {
+  min-height: 1.1rem;
+  font-size: 0.78rem;
+  color: var(--error-red);
+  margin-top: 0.3rem;
+}
+
+.strength-meter {
+  height: 6px;
+  background: #e6e1d4;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 4px;
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.strength-bar.weak   { width: 33%;  background: var(--error-red); }
+.strength-bar.medium { width: 66%;  background: var(--gold); }
+.strength-bar.strong { width: 100%; background: var(--sage); }
+
+.strength-label {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  color: var(--primary);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-btn:hover { background: var(--sage); }
+
+.success-msg {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(59, 110, 71, 0.12);
+  color: var(--sage);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.success-msg.visible { display: block; }
+
+@media (max-width: 480px) {
+  .register-card { padding: 2rem 1.25rem; }
+}

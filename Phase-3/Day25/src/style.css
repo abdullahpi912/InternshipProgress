@@ -11,14 +11,14 @@
     --primary-light: #3b6e47;
     --primary-sage: #568c64;
     --primary-glow: rgba(59, 110, 71, 0.22);
-    
+
     --accent-terracotta: #d96b43;
     --accent-terracotta-hover: #c45731;
     --accent-gold: #e5a93c;
     --accent-gold-glow: rgba(229, 169, 60, 0.25);
     --accent-sage: #8ab090;
     --accent-clay: #b85e3a;
-    
+
     /* Backgrounds & Surfaces */
     --bg-sand: #faf8f3;
     --bg-canvas: #f2efe6;
@@ -26,7 +26,7 @@
     --surface-white: #ffffff;
     --surface-glass: rgba(255, 255, 255, 0.85);
     --surface-glass-dark: rgba(25, 43, 30, 0.88);
-    
+
     /* Borders & Shadows */
     --border-subtle: rgba(36, 66, 46, 0.12);
     --border-accent: rgba(59, 110, 71, 0.3);
@@ -58,14 +58,19 @@
    Base Resets & Keyframes
    ========================================================================== */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
@@ -80,7 +85,7 @@ html {
 body {
     font-family: var(--font-body);
     background-color: var(--bg-sand);
-    background-image: 
+    background-image:
         radial-gradient(circle at 12% 18%, rgba(138, 176, 144, 0.14) 0%, transparent 45%),
         radial-gradient(circle at 88% 82%, rgba(229, 169, 60, 0.1) 0%, transparent 45%),
         radial-gradient(circle at 50% 50%, rgba(217, 107, 67, 0.04) 0%, transparent 60%),
@@ -130,7 +135,12 @@ img {
     display: block;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     color: var(--text-dark);
     line-height: 1.2;
@@ -139,29 +149,64 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Keyframes for Micro-Animations */
 @keyframes floatBadge {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 @keyframes pulseDot {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(59, 110, 71, 0.6); }
-    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(59, 110, 71, 0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(59, 110, 71, 0); }
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(59, 110, 71, 0.6);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(59, 110, 71, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(59, 110, 71, 0);
+    }
 }
 
 @keyframes shimmerBtn {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
 }
 
 @keyframes cardFadeIn {
-    from { opacity: 0; transform: translateY(12px) scale(0.98); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 @keyframes leafSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* ==========================================================================
@@ -244,15 +289,15 @@ header {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.nav-toggle-checkbox:checked ~ .nav-toggle span:nth-child(1) {
+.nav-toggle-checkbox:checked~.nav-toggle span:nth-child(1) {
     transform: translateY(7.5px) rotate(45deg);
 }
 
-.nav-toggle-checkbox:checked ~ .nav-toggle span:nth-child(2) {
+.nav-toggle-checkbox:checked~.nav-toggle span:nth-child(2) {
     opacity: 0;
 }
 
-.nav-toggle-checkbox:checked ~ .nav-toggle span:nth-child(3) {
+.nav-toggle-checkbox:checked~.nav-toggle span:nth-child(3) {
     transform: translateY(-7.5px) rotate(-45deg);
 }
 
@@ -306,7 +351,7 @@ main {
     padding: 2rem 2rem 5rem;
 }
 
-main > section {
+main>section {
     padding-block: var(--section-padding);
     position: relative;
 }
@@ -349,7 +394,8 @@ main > section {
 }
 
 /* Buttons */
-.btn, .btn-outline {
+.btn,
+.btn-outline {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -488,7 +534,7 @@ main > section {
     min-height: 600px;
     padding: clamp(2.5rem, 4vw, 4.25rem);
     border-radius: var(--radius-lg);
-    background: 
+    background:
         radial-gradient(circle at 92% 8%, rgba(217, 107, 67, 0.14), transparent 48%),
         radial-gradient(circle at 8% 92%, rgba(59, 110, 71, 0.18), transparent 48%),
         linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(250, 248, 243, 0.88));
@@ -636,7 +682,7 @@ main > section {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     animation: floatBadge 4s ease-in-out infinite;
 }
 
@@ -802,8 +848,8 @@ main > section {
     font-size: 0.85rem;
     padding: 0.4rem 0.95rem;
     border-radius: 99px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .step-body {
@@ -903,7 +949,7 @@ main > section {
 /* Call to Action Banner */
 .cta-banner {
     position: relative;
-    background: 
+    background:
         linear-gradient(135deg, rgba(25, 43, 30, 0.94), rgba(59, 110, 71, 0.92)),
         url('../Farmer_image/R.jpg') center/cover;
     border-radius: var(--radius-lg);
@@ -998,11 +1044,11 @@ main > section {
 }
 
 /* Radio Checked States targeting preset labels */
-#preset-custom:checked ~ main .presets-section label[for="preset-custom"],
-#preset-rice:checked ~ main .presets-section label[for="preset-rice"],
-#preset-coffee:checked ~ main .presets-section label[for="preset-coffee"],
-#preset-cotton:checked ~ main .presets-section label[for="preset-cotton"],
-#preset-chickpea:checked ~ main .presets-section label[for="preset-chickpea"] {
+#preset-custom:checked~main .presets-section label[for="preset-custom"],
+#preset-rice:checked~main .presets-section label[for="preset-rice"],
+#preset-coffee:checked~main .presets-section label[for="preset-coffee"],
+#preset-cotton:checked~main .presets-section label[for="preset-cotton"],
+#preset-chickpea:checked~main .presets-section label[for="preset-chickpea"] {
     background: var(--primary-light);
     color: var(--surface-white);
     border-color: var(--primary-light);
@@ -1098,7 +1144,7 @@ main > section {
     box-shadow: 0 0 0 4px var(--primary-glow);
 }
 
-.input-control:focus ~ i {
+.input-control:focus~i {
     color: var(--accent-terracotta);
 }
 
@@ -1144,11 +1190,11 @@ main > section {
 }
 
 /* Toggle Result Card Visibility based on Radio Preset Selection */
-#preset-custom:checked ~ main .result-card-custom,
-#preset-rice:checked ~ main .result-card-rice,
-#preset-coffee:checked ~ main .result-card-coffee,
-#preset-cotton:checked ~ main .result-card-cotton,
-#preset-chickpea:checked ~ main .result-card-chickpea {
+#preset-custom:checked~main .result-card-custom,
+#preset-rice:checked~main .result-card-rice,
+#preset-coffee:checked~main .result-card-coffee,
+#preset-cotton:checked~main .result-card-cotton,
+#preset-chickpea:checked~main .result-card-chickpea {
     display: block;
 }
 
@@ -1636,7 +1682,7 @@ footer {
         box-shadow: var(--shadow-lg);
     }
 
-    .nav-toggle-checkbox:checked ~ .nav-links {
+    .nav-toggle-checkbox:checked~.nav-links {
         display: flex;
     }
 
@@ -1671,19 +1717,19 @@ footer {
 }
 
 /* Pure CSS Radio Filtering for Categories */
-#cat-grains:checked ~ main .crop-card:not(.cat-grains),
-#cat-pulses:checked ~ main .crop-card:not(.cat-pulses),
-#cat-fruits:checked ~ main .crop-card:not(.cat-fruits),
-#cat-commercial:checked ~ main .crop-card:not(.cat-commercial) {
+#cat-grains:checked~main .crop-card:not(.cat-grains),
+#cat-pulses:checked~main .crop-card:not(.cat-pulses),
+#cat-fruits:checked~main .crop-card:not(.cat-fruits),
+#cat-commercial:checked~main .crop-card:not(.cat-commercial) {
     display: none;
 }
 
 /* Active Filter Tab Highlighting */
-#cat-all:checked ~ main label[for="cat-all"],
-#cat-grains:checked ~ main label[for="cat-grains"],
-#cat-pulses:checked ~ main label[for="cat-pulses"],
-#cat-fruits:checked ~ main label[for="cat-fruits"],
-#cat-commercial:checked ~ main label[for="cat-commercial"] {
+#cat-all:checked~main label[for="cat-all"],
+#cat-grains:checked~main label[for="cat-grains"],
+#cat-pulses:checked~main label[for="cat-pulses"],
+#cat-fruits:checked~main label[for="cat-fruits"],
+#cat-commercial:checked~main label[for="cat-commercial"] {
     background: var(--primary);
     color: var(--surface-white);
     border-color: var(--primary-light);
@@ -1900,7 +1946,7 @@ footer {
     transition: var(--transition);
 }
 
-.topic-pill-input:checked + .topic-pill-label {
+.topic-pill-input:checked+.topic-pill-label {
     background: var(--primary);
     color: var(--surface-white);
     border-color: var(--primary-light);
@@ -2532,14 +2578,14 @@ footer {
     border-color: var(--primary-sage);
 }
 
-#mode-crop:checked ~ main .mode-tab-btn.tab-crop {
+#mode-crop:checked~main .mode-tab-btn.tab-crop {
     background: var(--primary);
     color: var(--surface-white);
     border-color: var(--primary);
     box-shadow: var(--shadow-glow);
 }
 
-#mode-fertilizer:checked ~ main .mode-tab-btn.tab-fertilizer {
+#mode-fertilizer:checked~main .mode-tab-btn.tab-fertilizer {
     background: var(--accent-terracotta);
     color: var(--surface-white);
     border-color: var(--accent-terracotta);
@@ -2550,11 +2596,11 @@ footer {
     display: none;
 }
 
-#mode-fertilizer:checked ~ main .crop-only-field {
+#mode-fertilizer:checked~main .crop-only-field {
     display: none;
 }
 
-#mode-fertilizer:checked ~ main .fert-only-field {
+#mode-fertilizer:checked~main .fert-only-field {
     display: block;
 }
 
@@ -2563,11 +2609,11 @@ footer {
     display: none;
 }
 
-#cat-fertilizers:checked ~ main .crop-card {
+#cat-fertilizers:checked~main .crop-card {
     display: none;
 }
 
-#cat-fertilizers:checked ~ main .crop-card.cat-fertilizers {
+#cat-fertilizers:checked~main .crop-card.cat-fertilizers {
     display: flex;
 }
 
@@ -3057,7 +3103,9 @@ footer {
 /* ==========================================================================
    Ultra-Clean Centered Minimal Footer Styles
    ========================================================================== */
-footer, .footer-centered, .footer-compact {
+footer,
+.footer-centered,
+.footer-compact {
     background: var(--primary-dark);
     color: #e0e8e2;
     padding: 1.8rem 1.5rem 1.2rem;
@@ -3105,10 +3153,3 @@ footer, .footer-centered, .footer-compact {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
 }
-
-
-
-
-
-
-

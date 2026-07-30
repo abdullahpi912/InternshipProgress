@@ -31,9 +31,13 @@ export default function About() {
             <div className="hero-floating-pill">
               <i className="fa-solid fa-leaf" style={{ color: 'var(--accent-gold)' }}></i> Precision Soil AI
             </div>
-            <div className="hero-image" style={{ height: '360px' }}>
-              <img src="/Farmer_image/R.jpg" alt="Crop field research and data analysis" />
-            </div>
+            <figure className="hero-image" style={{ height: '360px' }}>
+              <img 
+                src="/Farmer_image/Truck_image.jpg" 
+                alt="Farm tractor working across vibrant agricultural farmland" 
+                onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/Farmer_image/Truck_image'; }}
+              />
+            </figure>
           </div>
         </div>
       </section>
