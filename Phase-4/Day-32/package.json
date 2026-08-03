@@ -1,0 +1,13 @@
+{
+  "name": "day32-express-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Day 32 - Express server for portfolio site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.2"
+  }
+}

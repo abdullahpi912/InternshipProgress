@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Abdullah P I{% endblock %}
+
+{% block content %}
+<section class="hero" id="home">
+    <article class="hero-text">
+        <h3>Hello, I'm</h3>
+        <h1>Abdullah P I</h1>
+        <h2>B.Tech AI & DS Student</h2>
+        <p>
+            Passionate Artificial Intelligence and Data Science student
+            who loves building Machine Learning solutions, analyzing data,
+            and developing real-world intelligent applications.
+        </p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('about') }}#projects" class="btn">View Projects</a>
+            <a href="{{ url_for('contact') }}" class="btn-outline">Contact Me</a>
+        </div>
+    </article>
+</section>
+{% endblock %}

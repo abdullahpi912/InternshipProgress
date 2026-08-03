@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block title %}About | Abdullah P I{% endblock %}
+
+{% block content %}
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <article class="about-container">
+        <div class="about-content">
+            <p>
+                I am Abdullah P I, currently pursuing a Bachelor of Technology
+                in Artificial Intelligence & Data Science at
+                B.S. Abdur Rahman Crescent Institute of Science and Technology.
+            </p>
+            <p>
+                I enjoy solving real-world problems using Machine Learning,
+                Data Analysis, and Python programming.
+                My goal is to become a skilled Machine Learning Engineer
+                and contribute to innovative AI solutions.
+            </p>
+            <div class="info-grid">
+                <div>
+                    <strong>Name</strong>
+                    <p>Abdullah P I</p>
+                </div>
+                <div>
+                    <strong>Location</strong>
+                    <p>India</p>
+                </div>
+                <div>
+                    <strong>Email</strong>
+                    <p>abdullahpi912@gmail.com</p>
+                </div>
+                <div>
+                    <strong>Degree</strong>
+                    <p>B.Tech AI & DS</p>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="education">
+    <h2 class="section-title">Education</h2>
+    <article class="education-card">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <div>
+            <h3>
+                B.S. Abdur Rahman Crescent Institute
+                of Science and Technology
+            </h3>
+            <h4>
+                Bachelor of Technology
+                (Artificial Intelligence & Data Science)
+            </h4>
+            <p>2024 – 2028</p>
+            <span>Current CGPA : 9.80</span>
+        </div>
+    </article>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+        <article class="skill-card">
+            <i class="fa-brands fa-python"></i>
+            <h3>Python</h3>
+        </article>
+        <article class="skill-card">
+            <i class="fa-solid fa-database"></i>
+            <h3>SQL</h3>
+        </article>
+        <article class="skill-card">
+            <i class="fa-solid fa-chart-simple"></i>
+            <h3>Power BI</h3>
+        </article>
+        <article class="skill-card">
+            <i class="fa-solid fa-robot"></i>
+            <h3>Machine Learning</h3>
+        </article>
+        <article class="skill-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>EDA</h3>
+        </article>
+    </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-container">
+        <article class="project-card">
+            <h3>Smart Crop Recommendation System</h3>
+            <p>
+                Developed a Machine Learning model that recommends
+                suitable crops based on soil and environmental
+                conditions.
+            </p>
+            <h4>Tech Stack</h4>
+            <span>
+                Python | Pandas | NumPy | Scikit-learn |
+                Matplotlib | Seaborn
+            </span>
+        </article>
+
+        <article class="project-card">
+            <h3>Heart Disease Prediction System</h3>
+            <p>
+                Developed a prediction model using patient medical
+                records to identify the possibility of heart disease.
+            </p>
+            <h4>Tech Stack</h4>
+            <span>
+                Python | Pandas | Scikit-learn | Matplotlib
+            </span>
+        </article>
+    </div>
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certifications" class="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <div class="certificate-container">
+        <article class="certificate-card">
+            <a href="{{ url_for('static', filename='Images/Certificate.pdf') }}" target="_blank">View Python Training Certificate</a>
+            <figcaption>Python Training</figcaption>
+        </article>
+
+        <article class="certificate-card">
+            <a href="{{ url_for('static', filename='Images/ABDULLAH-P-I-Participant-Certificate.pdf') }}" target="_blank">View C Training Certificate</a>
+            <figcaption>C Training</figcaption>
+        </article>
+
+        <article class="certificate-card">
+            <a href="{{ url_for('static', filename='Images/ABDULLAH-P-I-Participant-Certificate (1).pdf') }}" target="_blank">View Advanced C++ Certificate</a>
+            <figcaption>Advanced C++</figcaption>
+        </article>
+
+        <article class="certificate-card">
+            <a href="{{ url_for('static', filename='Images/ABDULLAH-P-I-Participant-Certificate (3).pdf') }}" target="_blank">View Linux Training Certificate</a>
+            <figcaption>Linux Training</figcaption>
+        </article>
+
+        <article class="certificate-card">
+            <a href="{{ url_for('static', filename='Images/ABDULLAH-P-I-Participant-Certificate (4).pdf') }}" target="_blank">View IBM Machine Learning Certificate</a>
+            <figcaption>IBM Machine Learning</figcaption>
+        </article>
+
+        <article class="certificate-card">
+            <a href="{{ url_for('static', filename='Images/Coursera 43EYKMXSMI9E.pdf') }}" target="_blank">View Power BI Workshop Certificate</a>
+            <figcaption>Power BI Workshop</figcaption>
+        </article>
+    </div>
+</section>
+
+{% endblock %}
