@@ -1,0 +1,118 @@
+:root {
+  --bg: #0f1117;
+  --bg-card: #171a23;
+  --text: #e7e9ee;
+  --text-dim: #9aa0ac;
+  --accent: #6366f1;
+  --accent-2: #06b6d4;
+  --border: #262a35;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+body.light {
+  --bg: #f5f6fa;
+  --bg-card: #ffffff;
+  --text: #171a23;
+  --text-dim: #5a5f6d;
+  --border: #e2e4ea;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+nav .brand { font-weight: 700; font-size: 1.1rem; }
+
+nav .links a {
+  color: var(--text-dim);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.95rem;
+}
+
+nav .links a.active, nav .links a:hover { color: var(--accent); }
+
+#themeToggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+main { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+
+h1 { font-size: 1.8rem; margin-bottom: 8px; }
+.subtitle { color: var(--text-dim); margin-bottom: 32px; }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.project-card h3 { margin: 0 0 6px; }
+.project-card p { margin: 0 0 8px; color: var(--text-dim); }
+.tech-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent);
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.card-actions { display: flex; gap: 8px; }
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+}
+
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-edit { background: rgba(99, 102, 241, 0.15); color: var(--accent); }
+.btn-delete { background: rgba(239, 68, 68, 0.15); color: var(--danger); }
+
+form.card { display: flex; flex-direction: column; gap: 10px; }
+
+input, textarea {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+#formStatus, #contactStatus { font-size: 0.9rem; }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}

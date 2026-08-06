@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day 34 - About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+  <nav>
+    <span class="brand">Day34 REST Demo</span>
+    <div class="links">
+      <a href="home.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button id="themeToggle">☀️</button>
+  </nav>
+
+  <main>
+    <h1>About This Build</h1>
+    <p class="subtitle">Day 34 task: REST API &amp; Middlewares</p>
+
+    <div class="card">
+      <h3>What's implemented</h3>
+      <p><strong>Middlewares</strong> — a request logger, a response timer, and a body validator, all registered on the Express app.</p>
+      <p><strong>HTTP methods</strong> — GET, POST, PUT, and DELETE are all implemented on <code>/api/projects</code>.</p>
+      <p><strong>Frontend</strong> — the Projects page uses <code>fetch()</code> to call every one of those endpoints and update the UI live.</p>
+    </div>
+  </main>
+
+  <footer>Day 34 — Innolift Ventures, Crescent Batch</footer>
+  <script src="js/theme.js"></script>
+</body>
+</html>

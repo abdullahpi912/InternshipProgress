@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day 34 - Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+  <nav>
+    <span class="brand">REST</span>
+    <div class="links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button id="themeToggle">☀️</button>
+  </nav>
+
+  <main>
+    <h1>Projects</h1>
+    <p class="subtitle">Full CRUD — add, edit, and delete, backed by the REST API.</p>
+
+    <div id="projectList"></div>
+
+    <h2 id="formTitle" style="margin-top:32px;">Add a New Project</h2>
+    <form class="card" id="projectForm">
+      <input type="hidden" id="projectId">
+      <input type="text" id="projectTitle" placeholder="Project title" required>
+      <textarea id="projectDescription" rows="3" placeholder="Short description" required></textarea>
+      <input type="text" id="projectTech" placeholder="Tech stack (e.g. Flask, React)">
+      <p id="formStatus"></p>
+      <div class="card-actions">
+        <button type="submit" class="btn-primary">Save Project</button>
+        <button type="button" id="cancelEdit" class="btn-edit" style="display:none;">Cancel Edit</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>Day 34 — Innolift Ventures, Crescent Batch</footer>
+  <script src="js/theme.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>
