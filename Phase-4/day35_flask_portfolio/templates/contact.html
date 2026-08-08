@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Abdullah P I</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">
+                <img class="logo-img" src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='10' fill='%232563eb'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Poppins,sans-serif' font-size='18' fill='%23ffffff'%3EA%3C/text%3E%3C/svg%3E" alt="Logo">
+            </h2>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <article class="contact-card">
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    abdullahpi912@gmail.com
+                </p>
+                <p>
+                    <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/abdullahpi912" target="_blank">
+                        github.com/abdullahpi912
+                    </a>
+                </p>
+                <p>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/abdullah-p-i-816854320" target="_blank">
+                        linkedin.com/in/abdullah-p-i-816854320
+                    </a>
+                </p>
+            </article>
+
+            <h3 style="margin-top:32px;">Send a Message</h3>
+            <form class="card" id="contactForm">
+                <input type="text" id="contactName" placeholder="Your Name" required>
+                <input type="email" id="contactEmail" placeholder="Your Email" required>
+                <input type="text" id="contactSubject" placeholder="Subject">
+                <textarea id="contactMessage" rows="4" placeholder="Your Message" required></textarea>
+                <p id="contactStatus"></p>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Abdullah P I | Designed & Developed by Abdullah P I</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+</body>
+
+</html>
