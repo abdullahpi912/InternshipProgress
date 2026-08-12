@@ -1,0 +1,26 @@
+Day 41 - API Test Result
+=========================
+
+Command: python -m pytest tests/test_api.py -v
+
+============================= test session starts ==============================
+collected 1 item
+
+tests/test_api.py::test_get_students PASSED                              [100%]
+
+============================== 1 passed in 0.10s ===============================
+
+Manual verification (python app.py, then curl):
+
+GET http://127.0.0.1:5000/api/students
+Status: 200 OK
+
+[
+  {"id": 1, "name": "Abdullah", "email": "abdullah@example.com", "course": "B.Tech AI & DS"},
+  {"id": 2, "name": "Aisha", "email": "aisha@example.com", "course": "B.Tech CSE"},
+  {"id": 3, "name": "Rahul", "email": "rahul@example.com", "course": "B.Tech IT"},
+  {"id": 4, "name": "Priya", "email": "priya@example.com", "course": "B.Tech ECE"},
+  {"id": 5, "name": "Mohammed", "email": "mohammed@example.com", "course": "B.Tech AI & DS"}
+]
+
+Result: API returns 5 student records with id, name, email, course fields as required.
