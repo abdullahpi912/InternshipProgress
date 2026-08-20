@@ -1,0 +1,635 @@
+{
+  "info": {
+    "_postman_id": "efa27466-b5f8-45e5-ac94-01b6193d95ad",
+    "name": "Student Management API",
+    "description": "Day 45 - API testing collection for the Day 41-44 Student Management project (React + Flask + MySQL). Covers the happy path, input validation, duplicate handling, and invalid requests. Example responses were captured from a real run against Flask + MySQL, not fabricated.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET /api/students - List all students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/students",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "students"
+          ]
+        },
+        "description": "Fetch all students from MySQL. Expected: 200 OK, JSON array under data."
+      },
+      "response": [
+        {
+          "name": "Success - 200 OK",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/students",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "students"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"data\": [\n    {\n      \"course\": \"B.Tech AI & DS\",\n      \"email\": \"ananya.rao@example.com\",\n      \"id\": 1,\n      \"name\": \"Ananya Rao\"\n    },\n    {\n      \"course\": \"B.Tech CSE\",\n      \"email\": \"karthik.iyer@example.com\",\n      \"id\": 2,\n      \"name\": \"Karthik Iyer\"\n    },\n    {\n      \"course\": \"B.Tech ECE\",\n      \"email\": \"sneha.menon@example.com\",\n      \"id\": 3,\n      \"name\": \"Sneha Menon\"\n    },\n    {\n      \"course\": \"B.Tech Mechanical\",\n      \"email\": \"rahul.varma@example.com\",\n      \"id\": 4,\n      \"name\": \"Rahul Varma\"\n    },\n    {\n      \"course\": \"B.Tech IT\",\n      \"email\": \"divya.prakash@example.com\",\n      \"id\": 5,\n      \"name\": \"Divya Prakash\"\n    }\n  ],\n  \"success\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "POST /api/students - Create student (valid)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/students",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "students"
+          ]
+        },
+        "description": "Create a new student with valid data. Expected: 201 Created, inserted row echoed back.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test Student\",\n  \"email\": \"test@example.com\",\n  \"course\": \"Computer Science\"\n}"
+        }
+      },
+      "response": [
+        {
+          "name": "Success - 201 Created",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/students",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "students"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Student\",\n  \"email\": \"test@example.com\",\n  \"course\": \"Computer Science\"\n}"
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"data\": {\n    \"course\": \"Computer Science\",\n    \"email\": \"test@example.com\",\n    \"id\": 6,\n    \"name\": \"Test Student\"\n  },\n  \"message\": \"Student added successfully\",\n  \"success\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "Invalid Input Tests (Task 04)",
+      "item": [
+        {
+          "name": "POST /api/students - Empty name",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/students",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "students"
+              ]
+            },
+            "description": "Expected: 400 Bad Request with a meaningful JSON error message.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"\",\n  \"email\": \"test2@example.com\",\n  \"course\": \"IT\"\n}"
+            }
+          },
+          "response": [
+            {
+              "name": "Bad Request - 400",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/students",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "students"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"\",\n  \"email\": \"test2@example.com\",\n  \"course\": \"IT\"\n}"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"Name, email and course are all required\",\n  \"success\": false\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST /api/students - Missing email",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/students",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "students"
+              ]
+            },
+            "description": "Expected: 400 Bad Request with a meaningful JSON error message.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Student\",\n  \"course\": \"IT\"\n}"
+            }
+          },
+          "response": [
+            {
+              "name": "Bad Request - 400",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/students",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "students"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Test Student\",\n  \"course\": \"IT\"\n}"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"Name, email and course are all required\",\n  \"success\": false\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST /api/students - Missing course",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/students",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "students"
+              ]
+            },
+            "description": "Expected: 400 Bad Request with a meaningful JSON error message.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Student\",\n  \"email\": \"test3@example.com\"\n}"
+            }
+          },
+          "response": [
+            {
+              "name": "Bad Request - 400",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/students",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "students"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Test Student\",\n  \"email\": \"test3@example.com\"\n}"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"Name, email and course are all required\",\n  \"success\": false\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST /api/students - Empty JSON body",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/students",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "students"
+              ]
+            },
+            "description": "Expected: 400 Bad Request with a meaningful JSON error message.",
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            }
+          },
+          "response": [
+            {
+              "name": "Bad Request - 400",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/students",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "students"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"Name, email and course are all required\",\n  \"success\": false\n}"
+            }
+          ]
+        },
+        {
+          "name": "POST /api/students - No request body",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/students",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "students"
+              ]
+            },
+            "description": "Send POST with no body at all. Expected: 400 Bad Request, API must not crash."
+          },
+          "response": [
+            {
+              "name": "Bad Request - 400",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/students",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "students"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"Name, email and course are all required\",\n  \"success\": false\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "POST /api/students - Duplicate email",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/students",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "students"
+          ]
+        },
+        "description": "Reuse an email already in the database. Expected: 409 Conflict, no duplicate row created.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Another Student\",\n  \"email\": \"test@example.com\",\n  \"course\": \"IT\"\n}"
+        }
+      },
+      "response": [
+        {
+          "name": "Conflict - 409",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/students",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "students"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Another Student\",\n  \"email\": \"test@example.com\",\n  \"course\": \"IT\"\n}"
+            }
+          },
+          "status": "Conflict",
+          "code": 409,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"A student with this email already exists\",\n  \"success\": false\n}"
+        }
+      ]
+    },
+    {
+      "name": "GET /api/student - Invalid endpoint (typo)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/student",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "student"
+          ]
+        },
+        "description": "Hit a route that doesn't exist. Expected: 404 Not Found, JSON error body."
+      },
+      "response": [
+        {
+          "name": "Not Found - 404",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/student",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "student"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Endpoint not found\",\n  \"success\": false\n}"
+        }
+      ]
+    },
+    {
+      "name": "DELETE /api/students - Unsupported method",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/students",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "students"
+          ]
+        },
+        "description": "DELETE is not implemented on this endpoint. Expected: 405 Method Not Allowed, JSON error body."
+      },
+      "response": [
+        {
+          "name": "Method Not Allowed - 405",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/students",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "students"
+              ]
+            }
+          },
+          "status": "Method Not Allowed",
+          "code": 405,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Method not allowed on this endpoint\",\n  \"success\": false\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000",
+      "type": "string"
+    }
+  ]
+}
