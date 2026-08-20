@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS students (
 );
 
 -- Sample records
-INSERT INTO students (name, email, course) VALUES
+INSERT IGNORE INTO students (name, email, course) VALUES
     ('Ananya Rao', 'ananya.rao@example.com', 'B.Tech AI & DS'),
     ('Karthik Iyer', 'karthik.iyer@example.com', 'B.Tech CSE'),
     ('Sneha Menon', 'sneha.menon@example.com', 'B.Tech ECE'),
