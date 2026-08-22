@@ -1,0 +1,7 @@
+$kind: http-request
+name: DELETE /api/students - Unsupported method
+description: "DELETE is not implemented on this endpoint. Expected: 405 Method Not Allowed, JSON error body."
+url: "{{base_url}}/api/students"
+method: DELETE
+examples: ./.resources/DELETE -api-students - Unsupported method.resources/examples
+order: 7000

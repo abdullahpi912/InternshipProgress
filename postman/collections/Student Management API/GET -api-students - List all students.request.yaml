@@ -1,0 +1,7 @@
+$kind: http-request
+name: GET /api/students - List all students
+description: "Fetch all students from MySQL. Expected: 200 OK, JSON array under data."
+url: "{{base_url}}/api/students"
+method: GET
+examples: ./.resources/GET -api-students - List all students.resources/examples
+order: 3000

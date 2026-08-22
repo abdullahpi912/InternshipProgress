@@ -1,0 +1,9 @@
+$kind: http-request
+name: POST /api/students - No request body
+description: "Send POST with no body at all. Expected: 400 Bad Request, API must not crash."
+url: "{{base_url}}/api/students"
+method: POST
+headers:
+  Content-Type: application/json
+examples: ./.resources/POST -api-students - No request body.resources/examples
+order: 5000

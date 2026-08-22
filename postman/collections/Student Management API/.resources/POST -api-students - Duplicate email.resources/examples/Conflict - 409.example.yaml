@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/api/students"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: text
+    content: |-
+      {
+        "name": "Another Student",
+        "email": "test@example.com",
+        "course": "IT"
+      }
+response:
+  statusCode: 409
+  statusText: Conflict
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "message": "A student with this email already exists",
+        "success": false
+      }
+order: 1000

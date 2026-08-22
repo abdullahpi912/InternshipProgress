@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/api/students"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: text
+    content: |-
+      {
+        "name": "Test Student",
+        "email": "test@example.com",
+        "course": "Computer Science"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "data": {
+          "course": "Computer Science",
+          "email": "test@example.com",
+          "id": 6,
+          "name": "Test Student"
+        },
+        "message": "Student added successfully",
+        "success": true
+      }
+order: 1000

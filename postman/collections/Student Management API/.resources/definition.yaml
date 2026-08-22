@@ -1,0 +1,4 @@
+$kind: collection
+description: Day 45 - API testing collection for the Day 41-44 Student Management project (React + Flask + MySQL). Covers the happy path, input validation, duplicate handling, and invalid requests. Example responses were captured from a real run against Flask + MySQL, not fabricated. Day 46 adds the /api/predict folder — crop recommendation model served through Flask, with valid-prediction and invalid-input examples captured from a real run.
+variables:
+  base_url: http://localhost:5000

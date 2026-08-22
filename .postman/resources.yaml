@@ -1,0 +1,19 @@
+# Use this workspace to collaborate
+workspace:
+  id: 8bfc6488-cd7c-4175-82f6-742249306280
+
+localResources:
+  collections:
+    - ../Phase-5/Day44_student-management/postman/Student_Management_API.postman_collection.json
+    - ../Phase-5/Day45_student-management/postman/Student_Management_API.postman_collection.json
+    - ../Phase-5/Day46_student-management/postman/Student_Management_API.postman_collection.json
+    - ../Phase-5/Day47 &
+      48_student-management/postman/Student_Management_API.postman_collection.json
+    - ../Phase-4/Day36 -
+      Day40/Smart-Crop-Advisory-Platform/Backend/AgriSense_Postman_Collection.json
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/Student Management API: 2d482ad6-b19f-4d2c-9e72-7b0d2114d404

@@ -1,0 +1,17 @@
+$kind: http-request
+name: POST /api/students - Create student (valid)
+description: "Create a new student with valid data. Expected: 201 Created, inserted row echoed back."
+url: "{{base_url}}/api/students"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Test Student",
+      "email": "test@example.com",
+      "course": "Computer Science"
+    }
+examples: ./.resources/POST -api-students - Create student (valid).resources/examples
+order: 4000

@@ -1,0 +1,30 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/api/predict"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: text
+    content: |-
+      {
+        "N": 90,
+        "P": 42,
+        "temperature": 20.87,
+        "humidity": 82.0,
+        "ph": 6.5,
+        "rainfall": 202.9
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "error": "Missing required input: K",
+        "success": false
+      }
+order: 1000

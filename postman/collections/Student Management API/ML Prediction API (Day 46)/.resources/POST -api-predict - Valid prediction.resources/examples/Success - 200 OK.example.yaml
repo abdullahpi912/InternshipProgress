@@ -1,0 +1,31 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/api/predict"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: text
+    content: |-
+      {
+        "N": 90,
+        "P": 42,
+        "K": 43,
+        "temperature": 20.87,
+        "humidity": 82.0,
+        "ph": 6.5,
+        "rainfall": 202.9
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "prediction": "rice",
+        "success": true
+      }
+order: 1000

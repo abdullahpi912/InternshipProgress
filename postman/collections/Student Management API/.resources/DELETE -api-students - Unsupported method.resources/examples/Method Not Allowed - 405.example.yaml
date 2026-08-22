@@ -1,0 +1,19 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/api/students"
+  method: DELETE
+  headers:
+    Content-Type: application/json
+response:
+  statusCode: 405
+  statusText: Method Not Allowed
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "message": "Method not allowed on this endpoint",
+        "success": false
+      }
+order: 1000

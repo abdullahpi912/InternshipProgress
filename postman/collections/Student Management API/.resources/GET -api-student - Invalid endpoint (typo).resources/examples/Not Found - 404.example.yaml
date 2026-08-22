@@ -1,0 +1,19 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/api/student"
+  method: GET
+  headers:
+    Content-Type: application/json
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "message": "Endpoint not found",
+        "success": false
+      }
+order: 1000

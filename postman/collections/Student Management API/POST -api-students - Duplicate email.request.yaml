@@ -1,0 +1,17 @@
+$kind: http-request
+name: POST /api/students - Duplicate email
+description: "Reuse an email already in the database. Expected: 409 Conflict, no duplicate row created."
+url: "{{base_url}}/api/students"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Another Student",
+      "email": "test@example.com",
+      "course": "IT"
+    }
+examples: ./.resources/POST -api-students - Duplicate email.resources/examples
+order: 5000

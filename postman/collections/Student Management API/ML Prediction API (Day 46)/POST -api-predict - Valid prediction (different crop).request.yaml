@@ -1,0 +1,21 @@
+$kind: http-request
+name: POST /api/predict - Valid prediction (different crop)
+description: Different soil/climate values, different predicted crop, to show the model isn't just returning a constant.
+url: "{{base_url}}/api/predict"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "N": 100,
+      "P": 82,
+      "K": 50,
+      "temperature": 27.4,
+      "humidity": 80.3,
+      "ph": 5.9,
+      "rainfall": 104.6
+    }
+examples: ./.resources/POST -api-predict - Valid prediction (different crop).resources/examples
+order: 3000

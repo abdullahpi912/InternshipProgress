@@ -1,0 +1,50 @@
+$kind: http-example
+request:
+  url: "{{base_url}}/api/students"
+  method: GET
+  headers:
+    Content-Type: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "data": [
+          {
+            "course": "B.Tech AI & DS",
+            "email": "ananya.rao@example.com",
+            "id": 1,
+            "name": "Ananya Rao"
+          },
+          {
+            "course": "B.Tech CSE",
+            "email": "karthik.iyer@example.com",
+            "id": 2,
+            "name": "Karthik Iyer"
+          },
+          {
+            "course": "B.Tech ECE",
+            "email": "sneha.menon@example.com",
+            "id": 3,
+            "name": "Sneha Menon"
+          },
+          {
+            "course": "B.Tech Mechanical",
+            "email": "rahul.varma@example.com",
+            "id": 4,
+            "name": "Rahul Varma"
+          },
+          {
+            "course": "B.Tech IT",
+            "email": "divya.prakash@example.com",
+            "id": 5,
+            "name": "Divya Prakash"
+          }
+        ],
+        "success": true
+      }
+order: 1000

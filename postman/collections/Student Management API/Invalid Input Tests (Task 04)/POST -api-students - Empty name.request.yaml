@@ -1,0 +1,17 @@
+$kind: http-request
+name: POST /api/students - Empty name
+description: "Expected: 400 Bad Request with a meaningful JSON error message."
+url: "{{base_url}}/api/students"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "",
+      "email": "test2@example.com",
+      "course": "IT"
+    }
+examples: ./.resources/POST -api-students - Empty name.resources/examples
+order: 1000

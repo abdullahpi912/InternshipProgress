@@ -1,0 +1,7 @@
+$kind: http-request
+name: GET /api/student - Invalid endpoint (typo)
+description: "Hit a route that doesn't exist. Expected: 404 Not Found, JSON error body."
+url: "{{base_url}}/api/student"
+method: GET
+examples: ./.resources/GET -api-student - Invalid endpoint (typo).resources/examples
+order: 6000

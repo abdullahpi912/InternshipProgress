@@ -1,0 +1,12 @@
+$kind: http-request
+name: POST /api/predict - Empty JSON body
+description: "Expected: 400 Bad Request with a meaningful JSON error message."
+url: "{{base_url}}/api/predict"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: "{}"
+examples: ./.resources/POST -api-predict - Empty JSON body.resources/examples
+order: 5000

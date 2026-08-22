@@ -1,0 +1,21 @@
+$kind: http-request
+name: POST /api/predict - Valid prediction
+description: "Rice-favoring soil/climate values. Expected: 200 OK, predicted crop name."
+url: "{{base_url}}/api/predict"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "N": 90,
+      "P": 42,
+      "K": 43,
+      "temperature": 20.87,
+      "humidity": 82.0,
+      "ph": 6.5,
+      "rainfall": 202.9
+    }
+examples: ./.resources/POST -api-predict - Valid prediction.resources/examples
+order: 2000
